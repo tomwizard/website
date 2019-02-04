@@ -11,16 +11,6 @@
             {{ end }}
             {{/* Link directly to documentation etc., if possible. */}}
             {{ $langPage := cond (gt (len .Translations) 0) . .Site.Home }}
-             <li>
-                <a href="#">
-                    {{ $langPage.Language.LanguageName }} <span class="ui-icon ui-icon-carat-1-s"></span>
-                </a>
-                <ul>
-                {{ range $langPage.Translations }}
-                    <li><a href="{{  .RelPermalink }}">{{ .Language.LanguageName }}</a></li>
-                {{ end }}
-                </ul>
-            </li>
          
             <li>
                 <a href="#">
